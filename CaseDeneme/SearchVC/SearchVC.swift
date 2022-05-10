@@ -62,7 +62,7 @@ class SearchVC: UIViewController {
                             self.loadData()
                             
                         } catch {
-                            print(" N O O O ! ")
+                            print(" NOOO! ")
                         }
                     }
                 }
@@ -111,7 +111,7 @@ extension SearchVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        /// API'Den gelen datanın hepsi resimli olduğundan dolayı resimsiz birkaç tane cell eklemek istedim . .
+        /// API'Den gelen datanın hepsi resimli olduğundan dolayı resimsiz birkaç tane cell eklemek istedim . . .
         if indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 6 || indexPath.row == 8 {
             let cell = tblView.dequeueReusableCell(withIdentifier: "tableCellID", for: indexPath) as! TableCell
 
