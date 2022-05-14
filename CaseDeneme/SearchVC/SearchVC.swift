@@ -19,6 +19,7 @@ class SearchVC: UIViewController {
         
         tblView.register(UINib(nibName: "TableCell", bundle: nil), forCellReuseIdentifier: "tableCellID")
         tblView.register(UINib(nibName: "TableImageCell", bundle: nil), forCellReuseIdentifier: "ImageCellID")
+        tblView.prefetchDataSource = self
         tblView.separatorStyle = .none
     }
     
@@ -99,12 +100,15 @@ extension SearchVC: UICollectionViewDelegateFlowLayout {
         let newWidth = ( self.view.frame.size.width / 4) - 20
         let newHeight = collectionView.frame.size.height
         
-        
         return CGSize(width: newWidth, height: newHeight)
     }
 }
 
-extension SearchVC: UITableViewDelegate , UITableViewDataSource {
+extension SearchVC: UITableViewDelegate , UITableViewDataSource , UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        <#code#>
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArr.count
     }
