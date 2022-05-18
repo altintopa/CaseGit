@@ -15,5 +15,3 @@ struct Movie: Codable {
     let movieGenre: String
     let isPopular, isRecommended: Bool
 }
-
-// typealias Movies = [Movie]

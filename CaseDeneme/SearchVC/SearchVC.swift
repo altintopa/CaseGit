@@ -19,7 +19,6 @@ class SearchVC: UIViewController {
         
         tblView.register(UINib(nibName: "TableCell", bundle: nil), forCellReuseIdentifier: "tableCellID")
         tblView.register(UINib(nibName: "TableImageCell", bundle: nil), forCellReuseIdentifier: "ImageCellID")
-        tblView.prefetchDataSource = self
         tblView.separatorStyle = .none
     }
     
@@ -42,7 +41,7 @@ class SearchVC: UIViewController {
     
     func getDataFromApi(){
         
-        if usersArr.count < 1 {  /// wiilAppear ' da çalıştığından solayı sürekli API'den data çekiyor. Engellemek için !
+        if usersArr.count < 1 {  /// wiilAppear ' da çalıştığından dolayı sürekli API'den data çekiyor. Engellemek için !
             let url = URL(string: "https://www.mocky.io/v2/5dea8bf6300000d23f2b09d0")
             
             let session = URLSession.shared
@@ -104,10 +103,7 @@ extension SearchVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension SearchVC: UITableViewDelegate , UITableViewDataSource , UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        <#code#>
-    }
+extension SearchVC: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersArr.count
