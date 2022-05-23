@@ -22,8 +22,13 @@ class StoriesCell: UICollectionViewCell {
         lblUserName.text = data.userFullName
         userImage.load(url: URL(string: "\(data.userImageURL)")!)
         
+        /// en son kontrollerde resim yükleniyordu.  Ancak şuanda gelen url'den 500 internal server Hatası geliyor. .
         if userImage.image == nil {
+            print(data.userImageURL)
+            let images = ["MarriageStory","NickCage","Thor","OldGuard","TheAdamProject","TurningRed","MarriageStory","OldGuard","MarriageStory","TheAdamProject", "MarriageStory", "6undeground"]
+
             userImage.image = UIImage(named: "Thor")
+            userImage.image = UIImage(named: <#T##String#>)
         }
         
     }

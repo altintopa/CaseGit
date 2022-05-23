@@ -69,7 +69,7 @@
                                 <color key="textColor" red="0.53249784970000003" green="0.53249784970000003" blue="0.53249784970000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-14-eS1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" image="Thor" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-14-eS1">
                                 <rect key="frame" x="0.0" y="92.5" width="400" height="267.5"/>
                             </imageView>
                         </subviews>
@@ -125,6 +125,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Thor" width="840" height="1200"/>
         <image name="comment" width="20" height="20"/>
         <image name="like" width="20" height="20"/>
         <image name="more" width="24" height="24"/>

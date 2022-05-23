@@ -27,6 +27,7 @@ class TopCollectionCell: UICollectionViewCell {
          
         movieImage.load(url: URL(string: "\(data.movieImage)")!)
         if movieImage.image == nil {
+            print(data.movieImage)
             movieImage.load(url: URL(string: "https://i.pinimg.com/originals/10/0c/9c/100c9cbc784b0c0f7cd3cac70a206f62.jpg")!)
         }
         
