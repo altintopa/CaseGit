@@ -26,9 +26,8 @@ class StoriesCell: UICollectionViewCell {
         if userImage.image == nil {
             print(data.userImageURL)
             let images = ["MarriageStory","NickCage","Thor","OldGuard","TheAdamProject","TurningRed","MarriageStory","OldGuard","MarriageStory","TheAdamProject", "MarriageStory", "6undeground"]
-
-            userImage.image = UIImage(named: "Thor")
-            userImage.image = UIImage(named: <#T##String#>)
+            userImage.image = UIImage(named: images[.random(in: 0..<images.count)])
+            
         }
         
     }
