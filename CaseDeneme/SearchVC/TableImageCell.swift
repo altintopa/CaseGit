@@ -40,7 +40,7 @@ class TableImageCell: UITableViewCell {
         if movieImage.image == nil {
             /// buraya API'den data gelmediği için ve tek bir image değilde  farklı image'lar teşhir edilsin diye bu şekilde yazdım.
             let images = ["MarriageStory","NickCage","Thor","OldGuard","TheAdamProject","TurningRed","MarriageStory","OldGuard","MarriageStory","TheAdamProject", "MarriageStory", "6undeground"]
-            movieImage.image = UIImage(named: images[indexpath])
+            movieImage.image = UIImage(named: images[.random(in: 0..<images.count)])
         }
     }
 
