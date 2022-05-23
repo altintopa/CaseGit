@@ -22,6 +22,10 @@ class StoriesCell: UICollectionViewCell {
         lblUserName.text = data.userFullName
         userImage.load(url: URL(string: "\(data.userImageURL)")!)
         
+        if userImage.image == nil {
+            userImage.image = UIImage(named: "Thor")
+        }
+        
     }
     
     func configureDefaultCell(){
